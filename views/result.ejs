@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Student registration confirmation." />
+    <title>Registration Complete | Cognifyz</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="card result-card" aria-labelledby="page-title">
+        <div class="success-icon" aria-hidden="true">✓</div>
+        <div class="eyebrow">REGISTRATION COMPLETE</div>
+        <h1 id="page-title">You're all set, <%= student.name %>!</h1>
+        <p class="intro">Here are the details submitted:</p>
+
+        <dl class="details-list">
+          <div class="detail-row">
+            <dt>Full name</dt>
+            <dd><%= student.name %></dd>
+          </div>
+          <div class="detail-row">
+            <dt>Email address</dt>
+            <dd><%= student.email %></dd>
+          </div>
+          <div class="detail-row">
+            <dt>Department</dt>
+            <dd><%= student.department %></dd>
+          </div>
+        </dl>
+
+        <a class="button button-link" href="/">Register another student <span aria-hidden="true">→</span></a>
+        <p class="privacy-note">This demo displays submitted data but does not save it to a database.</p>
+      </section>
+      <footer>Built with Node.js, Express, and EJS</footer>
+    </main>
+  </body>
+</html>
